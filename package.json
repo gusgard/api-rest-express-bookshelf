@@ -1,0 +1,37 @@
+{
+  "name": "express-api",
+  "version": "0.0.1",
+  "description": "Express and Bookshelf",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha $(find ./tests -name '*.js') --opts mocha.opts",
+    "test-watch": "NODE_ENV=test mocha $(find ./tests -name '*.js') --opts mocha.opts --watch",
+    "start": "nodemon src/app",
+    "migrate": "gulp db:migrate",
+    "rollback": "gulp db:rollback"
+  },
+  "author": "Gustavo Gard",
+  "keywords": [
+    "express",
+    "api",
+    "rest",
+    "bookshelf",
+    "knex"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "body-parser": "^1.14.1",
+    "bookshelf": "^0.9.4",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4",
+    "knex": "^0.10.0",
+    "nodemon": "^1.9.2",
+    "pg": "^4.4.3",
+    "superagent": "^1.4.0"
+  }
+}
